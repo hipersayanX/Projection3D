@@ -111,7 +111,7 @@ class MainWindowPrivate
         QImage m_frame;
         QTimer m_timer;
 
-        /* Viewer coordenates */
+        /* Viewer coordinates */
 
         // Viewer position
         QVector<qreal> m_viewerPosition {0.0, 0.0, 100.0};
@@ -222,7 +222,7 @@ class MainWindowPrivate
         }
 
         // Rotate the vector so that the focal plane becomes parallel to the
-        // global XY plane, so then the coordenates becomes relative to the
+        // global XY plane, so then the coordinates becomes relative to the
         // global XY plane.
         template<typename T>
         inline static QVector<T> normalize(const QVector<T> &point,
@@ -249,7 +249,7 @@ class MainWindowPrivate
         }
 
         // Set the focal point as the center of the window, then calculate the
-        // coordenates relative to it.
+        // coordinates relative to it.
         template<typename T>
         inline static QVector<T> windowCoords(const QVector<T> &normalized,
                                               const QVector<T> &windowSize)
@@ -323,7 +323,7 @@ MainWindow::MainWindow(QWidget *parent):
             {7, 6},
         };
 
-        // Convert the 3D point to 2D coordenates
+        // Convert the 3D point to 2D coordinates
         QVector<QVector<VectorCoordsType>> paintedVertices;
         int i = 0;
 
